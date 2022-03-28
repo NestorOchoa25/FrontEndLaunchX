@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex LaunchX</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1>Pokedex</h1>
+    <main class="main">
+      <div class="search-pokemon">
+        <div class="pokedex_search">
+          <div class="pokedex-top">
+            <img
+              src="./img/pokedex-top.png"
+              alt="Pokedex"
+              width="100%"
+              height="100%"
+            />
+          </div>
+
+          <div class="pokedex-screen">
+            <div class="pokedex-content">
+              <div class="poke-image">
+                <img
+                  src="./img/pokeball.png"
+                  alt="Pokemon"
+                  id="pokeImg"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="poke-form">
+                <form onsubmit="searchPokemon(event);">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Nombre del pokemon"
+                    id="pokeInput"
+                  />
+                  <button type="submit" class="button">
+                    <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="pokedex-bottom">
+            <img
+              src="./img/pokedex-bottom.png"
+              alt="Pokedex"
+              width="100%"
+              height="100%"
+            />
+          </div>
+        </div>
+
+        <div class="pokedex_data">
+          <div
+            id="pokemon-data"
+            class="pokedex_data_content"
+            style="visibility: hidden"
+          >
+            <div class="section">
+              <label class="pokeName title" id="pokeName"></label>
+            </div>
+            <div class="section">
+              <label class="title">Tipo</label>
+              <br />
+              <label id="pokeType"></label>
+            </div>
+
+            <div class="section">
+              <label class="title">Estadísticas</label>
+              <br />
+              <div id="pokeStats">
+                <label>HP</label>
+                <label id="hp"></label>
+
+                <label>Attack</label>
+                <label id="attack"></label>
+
+                <label>Defense</label>
+                <label id="defense"></label>
+
+                <br />
+                <label>Special-attack</label>
+                <label id="special-attack"></label>
+
+                <label>Special-defense</label>
+                <label id="special-defense"></label>
+
+                <label>Speed</label>
+                <label id="speed"></label>
+              </div>
+            </div>
+            <div class="section">
+              <label class="title">Movimientos</label>
+              <br />
+              <label id="pokeMoves"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <script src="./js/pokedex.js"></script>
+  </footer>
+</html>
